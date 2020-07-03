@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prosp\\DS-2020\\src\\BackendApi\\BackendApi.csproj": {}
+    "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\BackendApi\\BackendApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prosp\\DS-2020\\src\\BackendApi\\BackendApi.csproj": {
+    "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\BackendApi\\BackendApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prosp\\DS-2020\\src\\BackendApi\\BackendApi.csproj",
+        "projectUniqueName": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\BackendApi\\BackendApi.csproj",
         "projectName": "BackendApi",
-        "projectPath": "C:\\Users\\prosp\\DS-2020\\src\\BackendApi\\BackendApi.csproj",
+        "projectPath": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\BackendApi\\BackendApi.csproj",
         "packagesPath": "C:\\Users\\prosp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prosp\\DS-2020\\src\\BackendApi\\obj\\",
+        "outputPath": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\BackendApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

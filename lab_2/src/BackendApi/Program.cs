@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace BackendApi
 {
@@ -22,10 +23,14 @@ namespace BackendApi
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var config = new ConfigurationBuilder()  
+                        .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.FullName + "/config")  
+                        .AddJsonFile("frontConfig.json", optional: false)  
+                        .Build(); 
                     webBuilder.ConfigureKestrel(options =>
                     {
                         // Setup a HTTP/2 endpoint without TLS.
-                        options.ListenAnyIP(5000, o => o.Protocols = HttpProtocols.Http2);
+                        options.ListenLocalhost(config.GetValue<int>("port"), o => o.Protocols = HttpProtocols.Http2);
                     });
 
                     webBuilder.UseStartup<Startup>();

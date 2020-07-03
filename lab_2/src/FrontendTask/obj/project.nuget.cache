@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fa0qwJR/jANKTm91Oub/Za5Q54BRB23y/xqqZuSKQCtsJPdM8peTNbSm7HtAxt5d1Yb5x4EpAfVnxVh6fvUpRg==",
+  "dgSpecHash": "RaWhl5UKLKL3zZr1v2t93MFIRNxIz1+ZaNs1uDHuy4/7wsuG6zGYX0XN2j+RKYQheXskEZhf2jsp1vEZh0viEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\prosp\\DS-2020\\src\\FrontendTask\\FrontendTask.csproj",
+  "projectFilePath": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\FrontendTask\\FrontendTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prosp\\.nuget\\packages\\google.protobuf\\3.11.3\\google.protobuf.3.11.3.nupkg.sha512",
     "C:\\Users\\prosp\\.nuget\\packages\\grpc.core.api\\2.27.0\\grpc.core.api.2.27.0.nupkg.sha512",

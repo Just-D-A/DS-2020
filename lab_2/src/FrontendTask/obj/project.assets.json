@@ -280,11 +280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prosp\\DS-2020\\src\\FrontendTask\\FrontendTask.csproj",
+      "projectUniqueName": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\FrontendTask\\FrontendTask.csproj",
       "projectName": "FrontendTask",
-      "projectPath": "C:\\Users\\prosp\\DS-2020\\src\\FrontendTask\\FrontendTask.csproj",
+      "projectPath": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\FrontendTask\\FrontendTask.csproj",
       "packagesPath": "C:\\Users\\prosp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prosp\\DS-2020\\src\\FrontendTask\\obj\\",
+      "outputPath": "C:\\Users\\prosp\\DS-2020\\lab_2\\src\\FrontendTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
