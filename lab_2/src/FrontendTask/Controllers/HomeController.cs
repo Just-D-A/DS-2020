@@ -19,11 +19,12 @@ namespace FrontendTask.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _configuration = new ConfigurationBuilder()
-                .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.FullName + "/config") 
-                .AddJsonFile("frontConfig.json", optional: true, reloadOnChange: true)
-                .Build();
-                
+            _configuration = new ConfigurationBuilder()  
+                        .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.FullName + "/Config")  
+                        .AddJsonFile("shipitsynConfig.json", optional: false)  
+                        .Build();
+            
+
             AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
         }
 
@@ -39,7 +40,7 @@ namespace FrontendTask.Controllers
                 return View("Error", new ErrorViewModel {RequestId = "Description can't be empty"});
             }
             try {
-            using var channel = GrpcChannel.ForAddress("http://localhost:" + _configuration["port"]);
+            using var channel = GrpcChannel.ForAddress("http://localhost:" + _configuration["BackendApi:port"]);
             var client = new Job.JobClient(channel);
             var reply = await client.RegisterAsync(new RegisterRequest { Description = description });
             return View("Task", new TaskViewModel { Id = reply.Id });
