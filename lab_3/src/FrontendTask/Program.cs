@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System.IO;
+using FrontendTask;
 
-namespace FrontendTask
+namespace PostForm
 {
     public class Program
     {
@@ -20,6 +22,13 @@ namespace FrontendTask
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var config = new ConfigurationBuilder()  
+                        .SetBasePath(new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.FullName + "/Config")  
+                        .AddJsonFile("shipitsynConfig.json", optional: false)  
+                        .Build();
+
+
+                    webBuilder.UseUrls($"https://localhost:{config.GetValue<int>("FrontendTask:port")}");
                     webBuilder.UseStartup<Startup>();
                 });
     }

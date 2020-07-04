@@ -1,4 +1,0 @@
-{
-	"BackendApiPort": 5004,
-	"RedisPort" : 6379
-}

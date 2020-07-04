@@ -8,7 +8,7 @@ cd FrontendTask
 start dotnet FrontendTask.dll
 
 cd ..
-cd JobLogger
+cd MyJobLogger
 start dotnet JobLogger.dll
 
 cd ..

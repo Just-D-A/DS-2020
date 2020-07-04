@@ -19,3 +19,4 @@ message RegisterRequest {
 message RegisterResponse {
   string id = 1;
 }
+
