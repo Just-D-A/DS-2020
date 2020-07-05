@@ -1,0 +1,5 @@
+{
+	 "BackendApi" : {"port" : 5000},
+	 "FrontendTask" : {"port" : 5001},
+	 "Redis" : {"port" : 6379}
+}
