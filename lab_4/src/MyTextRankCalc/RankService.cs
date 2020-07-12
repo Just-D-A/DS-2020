@@ -37,21 +37,21 @@ namespace Subscriber
             db.StringSet(id, value);
         }
 
-        private int calcMessageRating(string message)
+        private float calcMessageRating(string message)
         {
-            int countVowels = Regex.Matches(message, @"[aeiouаёеуоыиэюя]", RegexOptions.IgnoreCase).Count;
-            int countConsonants = Regex.Matches(message, @"[bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ]", RegexOptions.IgnoreCase).Count;
-            int result = countConsonants > 0 ? countVowels / countConsonants : 0;
+            float countVowels = Regex.Matches(message, @"[aeiouаёеуоыиэюя]", RegexOptions.IgnoreCase).Count;
+            float countConsonants = Regex.Matches(message, @"[bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ]", RegexOptions.IgnoreCase).Count;
+            float result = countConsonants > 0 ? countVowels / countConsonants : 0;
             return result;
         }
 
         public void RankTask(string id)
         {
             string val = getById(id + "_text");
-            int rating = calcMessageRating(val);
+            float rating = calcMessageRating(val);
             id += "_rating";
             setById(id, rating.ToString());
-            Console.WriteLine("text's: " + val + " rating is: " + rating.ToString());
+            Console.WriteLine("text's: " + val + " rating is: " + rating);
         }
 
         public void Run(IConnection connection)
